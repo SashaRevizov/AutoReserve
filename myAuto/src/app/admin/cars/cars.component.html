@@ -1,0 +1,74 @@
+<div class="cars">
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let car of cars$" class="col xl 4">
+        <a  (click)="selectOrder(car)">
+            <div  class="item">
+                <p>{{car.mark}}</p>
+                <span>{{car.engineCapacity}} | {{car.fuelType}} | {{car.transmissionType}}</span>
+                <img src={{car.imageSrc}}  alt="">
+                <div class="item__pricelist">
+            </div>
+          </div>
+        </a>
+    </div>
+  </div>
+</div>
+
+<div #modalD class="modal modal-fixed-footer" >
+    <div *ngIf="selectedCar" class="modal-content" >
+    <h4 class="mb1">Машина: {{selectedCar.mark}}</h4>
+    <table class="highlight">
+      <thead>
+            <tr>
+              <th>Місто знаходження</th>
+              <th>{{selectedCar.city}}</th>
+            </tr>
+            <tr>
+              <th>Тип кузова</th>
+              <th>{{selectedCar.carcase}}</th>
+            </tr>
+            <tr>
+              <th>Об'єм двигуна</th>
+              <th>{{selectedCar.engineCapacity}}</th>
+            </tr>
+            <tr>
+              <th>Тип палива</th>
+              <th>{{selectedCar.fuelType}} </th>
+            </tr>
+            <tr>
+              <th>Трансмісія</th>
+              <th>{{selectedCar.transmissionType}}</th>
+            </tr>
+            <tr>
+                <th>Ціна без застави</th>
+                <th>{{selectedCar.price}}</th>
+              </tr>
+              <tr>
+                  <th>Ціна з залогом</th>
+                  <th>{{selectedCar.priceZ}}</th>
+              </tr>
+              <tr>
+                  <th>Затрати палива</th>
+                  <th>{{selectedCar.costFuel}}</th>
+              </tr>
+              <tr>
+                  <th>Клас</th>
+                  <th>{{selectedCar.class}}</th>
+              </tr>
+              <tr>
+                  <th>Статус</th>
+                  <th>{{selectedCar.status}}</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="row">
+            <div *ngIf="selectedCar.status == 'Заброньована';" class="input-field col s3">
+                <a  (click)="active()"  class="btn  amber accent-4" >Активувати</a>
+            </div>
+            <div  class="input-field col xl3 offset-xl1">
+                <button   class="btn amber accent-4" (click)="delete()">Видалити</button>
+              </div>
+         
+        </div>
+  </div>

@@ -1,0 +1,131 @@
+<div class="container">
+  <div class="row">
+      <div class="col xl2 offset-xl2">
+          <div class="preview">
+              <img class="responsive-img h200" [src]="imagePreview" *ngIf="imagePreview">
+          </div>
+      </div>
+    <div class="col xl4">
+      
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="row">
+
+            <div class="input-field col xl6">
+                <input formControlName="mark" maxlength="55" id="mark" type="text" [ngClass]="{invalid: form.get('mark').invalid && form.get('mark').touched}">
+                <label for="mark">Марка</label>
+                <span class="helper-text red-text " *ngIf="form.get('mark').invalid && form.get('mark').touched" >
+                    <span  *ngIf="form.get('mark').errors['required']">Поле не повинно бути порожнім</span>
+                </span>
+              </div>
+              <div class="input-field col xl6">
+                  <select class="select-add" formControlName="class" name="class" id="class">
+                       <option value="Економ">Економ</option>
+                       <option value="Середній">Середній</option>
+                       <option value="Бізнес">Бізнес</option>
+                       <option value="Преміум">Преміум</option>
+                       <option value="Позашляховик">Позашляховик</option>
+                       <option value="Мінівен">Мінівен</option>
+                  </select>
+                  <label class="active" for="class">Клас</label>
+                </div>
+          </div>
+          <div class="row">
+          <div class="input-field col xl6">
+              <select class="select-add" formControlName="city" name="city" id="city">
+                   <option value="Київ">Київ</option>
+              </select>
+              <label class="active" for="city">Місто</label>
+            </div>
+
+          <div class="input-field col xl6">
+            <select class="select-add" formControlName="carcase" name="carcase" id="carcase">
+                 <option value="Седан">Седан</option>
+                 <option value="Універсал">Універсал</option>
+                 <option value="Хетчбек">Хетчбек</option>
+                 <option value="Мінівен">Мінівен</option>
+                 <option value="Позашляховик">Позашляховик</option>
+                 <option value="Купе">Купе</option>
+                 <option value="Кабріолет">Кабріолет</option>
+                 <option value="Пікап">Пікап</option>
+            </select>
+            <label class="active" for="carcase">Тип кузова</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col xl6">
+            <input formControlName="engineCapacity" maxlength="55" id="engineCapacity" type="text" [ngClass]="{invalid: form.get('engineCapacity').invalid && form.get('engineCapacity').touched}">
+            <label for="engineCapacity">Об'єм двигуна</label>
+            <span class="helper-text red-text " *ngIf="form.get('engineCapacity').invalid && form.get('engineCapacity').touched" >
+                <span  *ngIf="form.get('engineCapacity').errors['required']">Поле не повинно бути порожнім</span>
+            </span>
+          </div>
+
+          <div class="input-field col xl6">
+            <select class="select-add" formControlName="fuelType" name="fuelType" id="fuelType">
+                 <option value="Дизель">Дизель</option>
+                 <option value="Бензин">Бензин</option>
+            </select>
+            <label class="active" for="fuelType">Тип палива</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col xl6">
+            <select class="select-add" formControlName="transmissionType" name="transmissionType" id="transmissionType">
+                 <option value="Автомат">Автомат</option>
+                 <option value="Механіка">Механіка</option>
+            </select>
+            <label class="active" for="transmissionType">Трансмісія</label>
+          </div>
+
+          <div class="input-field col xl6">
+            <input formControlName="price" maxlength="55" id="price" type="text" [ngClass]="{invalid: form.get('price').invalid && form.get('price').touched}">
+            <label for="price">Ціна без залога</label>
+            <span class="helper-text red-text " *ngIf="form.get('price').invalid && form.get('price').touched" >
+                <span  *ngIf="form.get('price').errors['required']">Поле не повинно бути порожнім</span>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col xl6">
+            <input formControlName="priceZ" maxlength="55" id="priceZ" type="text" [ngClass]="{invalid: form.get('priceZ').invalid && form.get('priceZ').touched}">
+            <label for="priceZ">Ціна з залогом</label>
+            <span class="helper-text red-text " *ngIf="form.get('priceZ').invalid && form.get('priceZ').touched" >
+                <span  *ngIf="form.get('priceZ').errors['required']">Поле не повинно бути порожнім</span>
+            </span>
+          </div>
+
+          <div class="input-field col xl6">
+            <input formControlName="costFuel" maxlength="55" id="costFuel" type="text" [ngClass]="{invalid: form.get('costFuel').invalid && form.get('costFuel').touched}">
+            <label for="costFuel">Витрата бензину</label>
+            <span class="helper-text red-text " *ngIf="form.get('costFuel').invalid && form.get('costFuel').touched" >
+                <span  *ngIf="form.get('costFuel').errors['required']">Поле не повинно бути порожнім</span>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+            <div class="input-field col xl6">
+                <input
+                type="file"
+                class="dn"
+                (change)="onFileUpload($event)"
+                #input
+                >
+            <span class="reg-span-file">Фото</span>
+              <button
+                (click)="triggerClick()"
+                [disabled]="form.disabled"
+                type="button"
+                class="waves-effect waves-light btn right"
+              >
+                Файл
+              </button>
+            </div>
+            <div class="log-new col offset-xl1">
+                <button [disabled]="form.invalid" class="btn waves-effect waves-light amber accent-4 large" type="submit" name="action">Створити</button>
+            </div>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>

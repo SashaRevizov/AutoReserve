@@ -1,0 +1,43 @@
+
+    <ul id="services" class="dropdown-content">
+        <li><a routerLink="/concierge-service">Консьєрж-сервіс</a></li>
+        <li><a routerLink="/pomoshch-v-doroge">Допомога в дорозі</a></li>
+        <li><a routerLink="/arenda-gruzovogo-transporta">Оренда вантажного транспорту</a></li>
+        <li><a routerLink="/options">Додаткові опції</a></li>
+    </ul>
+    <ul id="condition" class="dropdown-content">
+        <li><a  routerLink="/rules">Для фізичних осіб</a></li>
+        <li><a  routerLink="/rulesBusiness">Для юридичних осіб</a></li>
+    </ul>
+
+
+<nav class="nav-extended">
+   <div class="container">
+      <div class="nav-wrapper">
+          <a routerLink="/" class="brand-logo">MyAuto</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a routerLink="/">Головна</a></li>
+              <li><a routerLink="/kiev">Парк авто</a></li>
+              <li><a class="dropdown-trigger"  data-target="services">Послуги<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a class="dropdown-trigger"  data-target="condition">Умови<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a routerLink="/contacts">Контакти</a></li>
+              <li><a href="#" (click)="logout($event)">Вийти</a></li>
+          </ul>
+      </div>
+      <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+          <li class="tab"><a routerLink="/admin/add/">Додати машину</a></li>
+          <li class="tab"><a routerLink="/admin/car">Перегляд машин</a></li>
+          <li class="tab"><a routerLink="/admin/process">Заброньовані машини</a></li>
+        </ul>
+      </div>
+   </div>
+</nav>
+<router-outlet></router-outlet>
+<footer class="page-footer">
+  <div class="footer-copyright">
+    <div class="container">
+    © 2019 BCPEP
+    </div>
+  </div>
+</footer>

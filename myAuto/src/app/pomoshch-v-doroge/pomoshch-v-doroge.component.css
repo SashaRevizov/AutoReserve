@@ -1,0 +1,15 @@
+h1{
+    padding-top: 60px;
+}
+h2{
+    font-size: 35px;
+    font-weight: 700;
+}
+ul li::before {
+    content: "\2714";
+    float: left;
+    margin-left: -23px;
+    font-size: 18px;
+    color: #1bb589;
+    font-size: 15px;
+}

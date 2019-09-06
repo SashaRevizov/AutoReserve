@@ -1,0 +1,82 @@
+h1{
+    margin-top: 0;
+    padding-top: 100px;
+}
+.class{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+ul li{
+
+   padding: 10px;
+}
+.class-car{
+    background-color: #304d7d;
+    padding: 10px;
+    display: block;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+label{
+    color: #000;
+}
+.item{
+    box-shadow: 0 2px 25px 0 rgba(0,0,0,.25);
+    border-radius: 20px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.item p{
+    font-size: 15px;
+    font-weight: 700;
+}
+.item span{
+    font-size: 15px;
+    color: grey;
+    font-weight: normal;
+}
+.item img{
+    width: 250px;
+}
+.item__pricelist ul {
+    width: 100%;
+    letter-spacing: -5px;
+    text-align: left;
+    color: #555;
+    font-size: 12px;
+}
+.item__pricelist li {
+    display: inline-block;
+    letter-spacing: normal;
+    vertical-align: top;
+    padding: 0 1.2% 0;
+    text-align: center;
+    width: 50%;
+    background: #fff;
+}
+.item__pricelist .pricelist-head {
+    border-bottom: 1px solid #e7e7e7;
+    width: 100%;
+    display: block;
+}
+td, th {
+    padding: 0;
+    display: table-cell;
+    text-align: center;
+}
+.btn-holder{
+    display: block;
+    border: 2px solid #1bb589;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 30px;
+    background-color: #d5d5d5;
+    color: #1bb589;
+    
+}
+

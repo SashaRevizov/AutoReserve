@@ -1,0 +1,38 @@
+.select-add{
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #0000;
+    border-bottom: 1px solid #9e9e9e;
+}
+	
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  font-size: 15px;
+
+}
+select:active, select:focus {
+    outline: none !important;
+  }
+  select:-moz-focus-inner {
+    border: 0 !important;
+  }
+  .dn{
+    display: none;
+}
+form{
+    margin-top: 100px;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 25px 0 rgba(0,0,0,.25);
+}
+.log-new{
+    margin-top: 16px;
+}
+.preview{
+  margin-top: 50%;
+}

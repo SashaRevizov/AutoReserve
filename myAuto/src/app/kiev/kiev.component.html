@@ -1,0 +1,47 @@
+<div class="city">
+  <div class="container">
+    <h1>Оренда авто y Києві</h1>
+    <div class="row">
+      <div class="col xl11 offset-xl1">
+        <div class="row">
+          <div *ngFor="let car of cars$" class="col xl4">
+              <div  class="item">
+                  <p>{{car.mark}}</p>
+                  <span>{{car.engineCapacity}} | {{car.fuelType}} | {{car.transmissionType}}</span>
+                  <img src={{car.imageSrc}} >
+                  <div class="item__pricelist">
+                      <ul>
+                          <li class="pricelist-head">Вартість за добу</li>
+                          <li>З задатком</li>
+                          <li>Без застави</li>
+                      </ul>
+                      <table>
+                          <tbody>
+                              <tr>
+                                  <td class="pledge">
+                                      <b> {{car.priceZ}}</b>
+                                  </td>
+                                  <td>
+                                    <b>{{car.price}}</b>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      
+                          
+                          <a  [routerLink]="['/kiev/reserv', car._id]">
+                            <div class="btn-holder">
+                                Забронювати
+                              </div>
+                           
+                          </a>
+                  
+                      
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

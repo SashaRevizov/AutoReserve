@@ -1,0 +1,13 @@
+
+.item{
+    height: 250px;
+    display: inline-block;
+}
+.item img{
+    width: 200px;
+    text-align: center;
+}
+
+.main{
+    padding-top: 100px;
+}

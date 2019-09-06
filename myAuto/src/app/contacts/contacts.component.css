@@ -1,0 +1,18 @@
+h1{
+    margin-top: 0;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.contact{
+    margin-bottom: 50px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 30px;
+    padding-right: 10px;
+}
+i{
+    position: relative;
+    top: 6px;
+    left: -5px;
+}

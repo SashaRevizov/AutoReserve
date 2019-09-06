@@ -1,0 +1,36 @@
+h1{
+    padding-top: 80px;
+}
+form{
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 30px;
+    min-height: 500px;
+    margin-bottom: 190px;
+}
+.car {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 30px;
+    margin-top: 185px;
+    text-align: center;
+}
+.car img{
+    width: 100%;
+}
+.all{
+    font-weight: 700;
+    font-size: 25px;
+}
+.select-add{
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #0000;
+    border-bottom: 1px solid;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 15px;
+  }

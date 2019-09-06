@@ -1,0 +1,10 @@
+.log{
+    padding-top: 250px;
+}
+
+form {
+    margin-bottom: 345px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 30px;
+}
